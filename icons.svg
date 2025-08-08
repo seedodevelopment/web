@@ -1,0 +1,78 @@
+<!-- A sprite that contains all SVG files -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+<symbol id="bgPattern" viewBox="0 0 1440 420" preserveAspectRatio="none">
+  <!-- лёгкая общая подложка -->
+  <rect width="1440" height="420" fill="currentColor" opacity=".9"/>
+
+  <!-- ОДНА ПЛИТКА 140x120 -->
+  <g id="tile" opacity="1">
+    <!-- кольцо + точка -->
+    <g fill="none" stroke="currentColor" stroke-linecap="round">
+      <circle cx="24" cy="26" r="14" stroke-width="4" opacity=".18"/>
+      <circle cx="24" cy="26" r="6" fill="currentColor" opacity=".10"/>
+    </g>
+
+    <!-- плюс -->
+    <g stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity=".12">
+      <line x1="88" y1="24" x2="116" y2="24"/>
+      <line x1="102" y1="10" x2="102" y2="38"/>
+    </g>
+
+    <!-- мягкие S-изгибы -->
+    <g fill="none" stroke="currentColor" stroke-linecap="round">
+      <path d="M16 92 C 40 72, 80 112, 112 92" stroke-width="10" opacity=".08"/>
+      <path d="M20 122 C 44 142, 84 102, 116 122" stroke-width="6"  opacity=".08"/>
+    </g>
+  </g>
+
+  <!-- РЯДЫ ПЛИТОК (повтор) -->
+  <!-- y = 0 -->
+  <g transform="translate(0,0)">
+    <use href="#tile"/><use x="140" href="#tile"/><use x="280" href="#tile"/><use x="420" href="#tile"/>
+    <use x="560" href="#tile"/><use x="700" href="#tile"/><use x="840" href="#tile"/><use x="980" href="#tile"/>
+    <use x="1120" href="#tile"/><use x="1260" href="#tile"/><use x="1400" href="#tile"/>
+  </g>
+  <!-- y = 120 (со смещением по X для “шахматки”) -->
+  <g transform="translate(70,120)">
+    <use href="#tile"/><use x="140" href="#tile"/><use x="280" href="#tile"/><use x="420" href="#tile"/>
+    <use x="560" href="#tile"/><use x="700" href="#tile"/><use x="840" href="#tile"/><use x="980" href="#tile"/>
+    <use x="1120" href="#tile"/><use x="1260" href="#tile"/><use x="1400" href="#tile"/>
+  </g>
+  <!-- y = 240 -->
+  <g transform="translate(0,240)">
+    <use href="#tile"/><use x="140" href="#tile"/><use x="280" href="#tile"/><use x="420" href="#tile"/>
+    <use x="560" href="#tile"/><use x="700" href="#tile"/><use x="840" href="#tile"/><use x="980" href="#tile"/>
+    <use x="1120" href="#tile"/><use x="1260" href="#tile"/><use x="1400" href="#tile"/>
+  </g>
+  <!-- y = 360 -->
+  <g transform="translate(70,360)">
+    <use href="#tile"/><use x="140" href="#tile"/><use x="280" href="#tile"/><use x="420" href="#tile"/>
+    <use x="560" href="#tile"/><use x="700" href="#tile"/><use x="840" href="#tile"/><use x="980" href="#tile"/>
+    <use x="1120" href="#tile"/><use x="1260" href="#tile"/><use x="1400" href="#tile"/>
+  </g>
+</symbol>
+
+
+    <symbol id="leftArrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.832 17.642L.345 9.864a1.256 1.256 0 0 1 0-1.728L7.832.358a1.146 1.146 0 0 1 1.663 0c.46.477.46 1.251 0 1.728L4.017 7.778H20v2.444H4.017l5.478 5.692c.46.477.46 1.25 0 1.728a1.146 1.146 0 0 1-1.663 0z"
+        fill="currentColor"
+      />
+    </symbol>
+    <symbol id="location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        class="location-primary"
+        fill="currentColor"
+        d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zM12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+      />
+      <path
+        class="location-secondary"
+        fill="currentColor"
+        d="M12 1a9 9 0 0 1 6.36 15.36l-5.65 5.66a1 1 0 0 1-.71.3V13a3 3 0 0 0 0-6V1z"
+      />
+    </symbol>
+  </defs>
+</svg>
